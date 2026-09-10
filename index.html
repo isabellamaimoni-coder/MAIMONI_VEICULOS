@@ -1,0 +1,3020 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Maimoni Veículos - Veículos usados e seminovos em Rio Claro - SP.">
+
+    <title>Maimoni Veículos | Seminovos e Usados</title>
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+    <style>
+
+        :root {
+            --primary: #ffc107;
+            --primary-dark: #e0a800;
+
+            --dark: #0b0b0b;
+            --dark-2: #111111;
+            --dark-3: #191919;
+
+            --light: #f5f5f5;
+            --gray: #777;
+
+            --whatsapp: #25d366;
+
+            --radius: 18px;
+
+            --shadow: 0 15px 40px rgba(0, 0, 0, .10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
+            background: var(--light);
+            color: #111;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 20px;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        .navbar {
+            background: rgba(8, 8, 8, .92) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: -.5px;
+        }
+
+        .navbar-brand img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .nav-link {
+            color: #ddd !important;
+            font-weight: 500;
+            margin-left: 10px;
+            transition: .25s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+            min-height: 650px;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 0, 0, .85),
+                    rgba(0, 0, 0, .45)
+                ),
+                url("./images/logo%20mamoni.png");
+
+            background-size: cover;
+            background-position: center;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    transparent 0%,
+                    rgba(0, 0, 0, .45) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: rgba(255, 193, 7, .12);
+            border: 1px solid rgba(255, 193, 7, .5);
+
+            color: var(--primary);
+
+            padding: 10px 18px;
+            border-radius: 100px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: .95;
+
+            font-weight: 900;
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: clamp(17px, 2vw, 23px);
+            color: #ddd;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            border: none;
+
+            background: var(--primary);
+            color: #111;
+
+            padding: 16px 30px;
+            border-radius: 10px;
+
+            font-weight: 800;
+            text-decoration: none;
+
+            transition: .3s;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-main:hover {
+            background: #fff;
+            color: #111;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(255, 193, 7, .25);
+        }
+
+        .btn-outline-main {
+            border: 1px solid rgba(255, 255, 255, .35);
+
+            color: white;
+            background: rgba(255, 255, 255, .06);
+
+            padding: 16px 30px;
+            border-radius: 10px;
+
+            font-weight: 700;
+            text-decoration: none;
+
+            transition: .3s;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline-main:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* =====================================================
+           SECTIONS
+        ====================================================== */
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+        }
+
+        .section-label {
+            color: #b88a00;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 50px);
+
+            font-weight: 900;
+            letter-spacing: -2px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           ESTOQUE
+        ====================================================== */
+
+        #carros {
+            background: #f4f4f4;
+        }
+
+        .car-card {
+            background: white;
+
+            border-radius: var(--radius);
+            overflow: hidden;
+
+            border: 1px solid #eee;
+
+            box-shadow: var(--shadow);
+
+            transition: .35s cubic-bezier(.2, .8, .2, 1);
+
+            height: 100%;
+            position: relative;
+        }
+
+        .car-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, .15);
+        }
+
+        .car-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car-image {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            transition: .5s ease;
+        }
+
+        .car-card:hover .car-image {
+            transform: scale(1.06);
+        }
+
+        .car-status {
+            position: absolute;
+
+            top: 15px;
+            left: 15px;
+
+            background: var(--primary);
+            color: #111;
+
+            padding: 7px 12px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+        .car-year {
+            position: absolute;
+
+            top: 15px;
+            right: 15px;
+
+            background: rgba(0, 0, 0, .75);
+            color: white;
+
+            padding: 7px 12px;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            backdrop-filter: blur(5px);
+        }
+
+        .car-content {
+            padding: 25px;
+        }
+
+        .car-brand {
+            color: #888;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 6px;
+        }
+
+        .car-title {
+            font-size: 22px;
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+        /* =====================================================
+           TODAS AS CAIXINHAS IGUAIS
+        ====================================================== */
+
+        .car-specs {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 22px;
+        }
+
+        .spec {
+            background: #f7f7f7;
+
+            padding: 10px 12px;
+
+            border-radius: 8px;
+
+            min-height: 58px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .spec small {
+            display: block;
+
+            color: #999;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            margin-bottom: 3px;
+        }
+
+        .spec strong {
+            font-size: 13px;
+        }
+
+        .car-footer {
+            display: flex;
+
+            align-items: end;
+            justify-content: space-between;
+
+            gap: 15px;
+        }
+
+        .price-label {
+            color: #999;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            display: block;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: 900;
+
+            color: #111;
+        }
+
+        .btn-details {
+            border: none;
+
+            background: #111;
+            color: white;
+
+            padding: 12px 17px;
+
+            border-radius: 8px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .btn-details:hover {
+            background: var(--primary);
+            color: #111;
+        }
+
+        /* =====================================================
+           MODAL
+        ====================================================== */
+
+        .modal-content {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #101010;
+            color: white;
+
+            padding: 20px 25px;
+
+            border: none;
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+
+        .modal-title {
+            font-weight: 800;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-inner {
+            padding: 30px;
+        }
+
+        .modal-price {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffc107,
+                    #ffdb69
+                );
+
+            border-radius: 12px;
+
+            padding: 18px 20px;
+
+            margin-bottom: 25px;
+        }
+
+        .modal-price span {
+            display: block;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .modal-price strong {
+            font-size: 34px;
+            font-weight: 900;
+        }
+
+        .description-title {
+            font-size: 20px;
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+        .feature-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+        }
+
+        .feature-list li {
+            background: #f6f6f6;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .modal-description {
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #f6f6f6;
+
+            border-radius: 12px;
+        }
+
+        .modal-description strong {
+            font-size: 16px;
+        }
+
+        .modal-description p {
+            margin: 12px 0 0;
+
+            color: #666;
+
+            line-height: 1.7;
+        }
+
+        .modal-whatsapp {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--whatsapp);
+            color: white;
+
+            text-decoration: none;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
+            margin-top: 25px;
+
+            transition: .3s;
+        }
+
+        .modal-whatsapp:hover {
+            background: #1ebe5d;
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           SOBRE
+        ====================================================== */
+
+        #sobre {
+            background: white;
+        }
+
+        .about-box {
+            padding: 20px 0;
+        }
+
+        .about-box h2 {
+            font-size: clamp(32px, 5vw, 48px);
+
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .about-box p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: #f5f5f5;
+
+            border-radius: 25px;
+
+            padding: 40px;
+        }
+
+        .about-image img {
+            max-width: 300px;
+
+            filter:
+                drop-shadow(
+                    0 20px 30px rgba(0, 0, 0, .12)
+                );
+        }
+
+        /* =====================================================
+           LOCALIZAÇÃO
+        ====================================================== */
+
+        #localizacao {
+            background: #111;
+            color: white;
+        }
+
+        .location-info {
+            padding: 80px 50px;
+        }
+
+        .location-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .location-info h2 {
+            font-size: 40px;
+            font-weight: 900;
+
+            margin-bottom: 30px;
+        }
+
+        .location-item {
+            margin-bottom: 25px;
+        }
+
+        .location-item strong {
+            display: block;
+
+            color: var(--primary);
+
+            margin-bottom: 7px;
+        }
+
+        .location-item span {
+            color: #bbb;
+            line-height: 1.7;
+        }
+
+        .map {
+            width: 100%;
+            min-height: 500px;
+
+            border: none;
+        }
+
+        /* =====================================================
+           CONTATO
+        ====================================================== */
+
+        #contato {
+            background: #080808;
+            color: white;
+        }
+
+        .contact-card {
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #101010
+                );
+
+            border: 1px solid #292929;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            transition: .3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #444;
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            font-size: 30px;
+        }
+
+        .contact-icon.whatsapp-icon {
+            background: rgba(37, 211, 102, .12);
+            color: var(--whatsapp);
+        }
+
+        .contact-icon.instagram-icon {
+            background: rgba(255, 255, 255, .08);
+            color: white;
+        }
+
+        .contact-card h3 {
+            font-weight: 800;
+        }
+
+        .contact-card p {
+            color: #999;
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-btn {
+            display: block;
+
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+        }
+
+        .contact-btn.whatsapp {
+            background: var(--whatsapp);
+            color: white;
+        }
+
+        .contact-btn.instagram {
+            background: white;
+            color: #111;
+        }
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            background: #050505;
+
+            color: #777;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+
+            border-top: 1px solid #1c1c1c;
+        }
+
+        footer strong {
+            color: #ddd;
+        }
+
+        /* =====================================================
+           WHATSAPP FLUTUANTE
+        ====================================================== */
+
+        .floating-whatsapp {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 60px;
+            height: 60px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--whatsapp);
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 28px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, .3);
+
+            z-index: 999;
+
+            transition: .3s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .car-image {
+                height: 220px;
+            }
+
+            .modal-image {
+                height: 220px;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .location-info {
+                padding: 60px 25px;
+            }
+
+            .map {
+                min-height: 350px;
+            }
+
+            .car-footer {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .btn-details {
+                width: 100%;
+                padding: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+
+                <img
+                    src="./images/logo.jpg"
+                    alt="Maimoni Veículos">
+
+                <span>
+                    Maimoni Veículos
+                </span>
+
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carros">
+                            Estoque
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#localizacao">
+                            Localização
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🚗 Estoque atualizado
+            </div>
+
+            <h1>
+                MAIMONI
+                <span>VEÍCULOS</span>
+            </h1>
+
+            <p>
+                Encontre seu próximo carro com
+                qualidade, segurança e confiança.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#carros"
+                    class="btn-main">
+
+                    VER ESTOQUE
+
+                </a>
+
+                <a
+                    href="https://wa.me/5519998670778?text=Olá! Vim pelo site da Maimoni Veículos e gostaria de conhecer os veículos disponíveis."
+                    target="_blank"
+                    rel="noopener"
+                    class="btn-outline-main">
+
+                    📱 FALAR NO WHATSAPP
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESTOQUE
+    ====================================================== -->
+
+    <section id="carros" class="section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    Nosso estoque
+                </div>
+
+                <h2 class="section-title">
+                    ENCONTRE SEU PRÓXIMO CARRO
+                </h2>
+
+                <p class="section-subtitle">
+                    Veículos selecionados para você.
+                    Confira os detalhes, equipamentos
+                    e condições de cada carro.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- =================================================
+                     KWID
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/KWID.jpg"
+                                class="car-image"
+                                alt="Renault Kwid Intense 2024">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2024
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                RENAULT
+                            </div>
+
+                            <h3 class="car-title">
+                                Kwid Intense 1.0
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2024</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>52.300 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 56.900
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalKwid">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FOX
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/fox.jpg"
+                                class="car-image"
+                                alt="Volkswagen Fox 2011">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2011
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                VOLKSWAGEN
+                            </div>
+
+                            <h3 class="car-title">
+                                Fox 1.0 Total Flex
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+
+                                    <small>ANO</small>
+
+                                    <strong>
+                                        2011
+                                    </strong>
+
+                                </div>
+
+                                <div class="spec">
+
+                                    <small>KM</small>
+
+                                    <strong>
+                                        122.350 km
+                                    </strong>
+
+                                </div>
+
+                                <div class="spec">
+
+                                    <small>CÂMBIO</small>
+
+                                    <strong>
+                                        Manual
+                                    </strong>
+
+                                </div>
+
+                                <div class="spec">
+
+                                    <small>COMBUSTÍVEL</small>
+
+                                    <strong>
+                                        Flex
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 30.900
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalFox">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ONIX 1.0
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/onix.jpg"
+                                class="car-image"
+                                alt="Chevrolet Onix LT 1.0 2013">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2013
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                CHEVROLET
+                            </div>
+
+                            <h3 class="car-title">
+                                Onix LT 1.0
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2013</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>118.500 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 43.900
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalOnix">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     HB20
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/hunday.jpg"
+                                class="car-image"
+                                alt="Hyundai HB20 Comfort Plus 2014">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2014
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                HYUNDAI
+                            </div>
+
+                            <h3 class="car-title">
+                                HB20 Comfort Plus
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2014</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>132.500 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 43.900
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalHb20">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SAVEIRO
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/saveiro.jpg"
+                                class="car-image"
+                                alt="Volkswagen Saveiro 1.6 CS Robust 2022">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2022
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                VOLKSWAGEN
+                            </div>
+
+                            <h3 class="car-title">
+                                Saveiro 1.6 CS Robust
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2022</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>90.100 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 59.999
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalSaveiro">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ONIX 1.4
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/ONIX VERMELHO.jpg"
+                                class="car-image"
+                                alt="Chevrolet Onix LT 1.4 2013">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2013
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                CHEVROLET
+                            </div>
+
+                            <h3 class="car-title">
+                                Onix LT 1.4
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2013</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>128.300 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        POR APENAS
+                                    </span>
+
+                                    <div class="price">
+                                        R$ 43.900
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalOnix14">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FIAT PULSE
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images/pulse.jpg"
+                                class="car-image"
+                                alt="Fiat Pulse 1.3 Drive 2024">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2024
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                FIAT
+                            </div>
+
+                            <h3 class="car-title">
+                                Pulse 1.3 Drive
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2024</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>71.300 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Automático</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Flex</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        VALOR
+                                    </span>
+
+                                    <div class="price">
+                                        CONSULTE
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalPulse">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     NEW BEETLE
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="car-card">
+
+                        <div class="car-image-wrapper">
+
+                            <img
+                                src="./images//CARROOOOOO.jpg"
+                                class="car-image"
+                                alt="Volkswagen New Beetle 2.0 2008">
+
+                            <span class="car-status">
+                                Disponível
+                            </span>
+
+                            <span class="car-year">
+                                2008
+                            </span>
+
+                        </div>
+
+                        <div class="car-content">
+
+                            <div class="car-brand">
+                                VOLKSWAGEN
+                            </div>
+
+                            <h3 class="car-title">
+                                New Beetle 2.0
+                            </h3>
+
+                            <div class="car-specs">
+
+                                <div class="spec">
+                                    <small>ANO</small>
+                                    <strong>2008</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>KM</small>
+                                    <strong>144.200 km</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>CÂMBIO</small>
+                                    <strong>Manual</strong>
+                                </div>
+
+                                <div class="spec">
+                                    <small>COMBUSTÍVEL</small>
+                                    <strong>Gasolina</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="car-footer">
+
+                                <div>
+
+                                    <span class="price-label">
+                                        VALOR
+                                    </span>
+
+                                    <div class="price">
+                                        CONSULTE
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    class="btn-details"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalBeetle">
+
+                                    DETALHES
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MODAL KWID
+    ====================================================== -->
+
+    <div class="modal fade" id="modalKwid" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Renault Kwid Intense 1.0
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/KWID.jpg"
+                        class="modal-image"
+                        alt="Renault Kwid">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 56.900
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Kwid Intense</li>
+                            <li>📅 Ano 2024</li>
+                            <li>⚙️ Motor 1.0 Flex</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>❄️ Ar condicionado</li>
+                            <li>🔌 Direção elétrica</li>
+                            <li>🔒 Trava elétrica</li>
+                            <li>🪟 Vidros elétricos</li>
+                            <li>🛞 Pneus novos</li>
+                            <li>📷 Câmera de ré</li>
+                            <li>🛡️ Laudo Cautelar Aprovado</li>
+                            <li>🛣️ 52.300 km</li>
+                            <li>📍 Rio Claro - SP</li>
+                            <li>📞 (19) 99867-0778</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Renault Kwid Intense 2024 por R$ 56.900."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL FOX
+    ====================================================== -->
+
+    <div class="modal fade" id="modalFox" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Volkswagen Fox 1.0 Total Flex
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/fox.jpg"
+                        class="modal-image"
+                        alt="Volkswagen Fox">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 30.900
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Volkswagen Fox</li>
+                            <li>📅 Ano 2011</li>
+                            <li>⚙️ Motor 1.0 Total Flex</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>🛣️ 122.350 km</li>
+                            <li>📍 Rio Claro - SP</li>
+                            <li>📞 (19) 99867-0778</li>
+                            <li>✅ Maimoni Veículos</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Volkswagen Fox 1.0 2011 por R$ 30.900."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL ONIX 1.0
+    ====================================================== -->
+
+    <div class="modal fade" id="modalOnix" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Chevrolet Onix LT 1.0
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/onix.jpg"
+                        class="modal-image"
+                        alt="Chevrolet Onix LT">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 43.900
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Chevrolet Onix LT</li>
+                            <li>📅 Ano 2013</li>
+                            <li>⚙️ Motor 1.0</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>⛽ Combustível Flex</li>
+                            <li>🛣️ 118.500 km</li>
+                            <li>📍 Rio Claro - SP</li>
+                            <li>📞 (19) 99867-0778</li>
+                            <li>✅ Maimoni Veículos</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Chevrolet Onix LT 2013 por R$ 43.900."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL HB20
+    ====================================================== -->
+
+    <div class="modal fade" id="modalHb20" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Hyundai HB20 Comfort Plus
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/hunday.jpg"
+                        class="modal-image"
+                        alt="Hyundai HB20">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 43.900
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Hyundai HB20</li>
+                            <li>✅ Comfort Plus</li>
+                            <li>📅 Ano 2014</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>⛽ Combustível Flex</li>
+                            <li>🛣️ 132.500 km</li>
+                            <li>📍 Rio Claro - SP</li>
+                            <li>📞 (19) 99867-0778</li>
+                            <li>✅ Maimoni Veículos</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Hyundai HB20 Comfort Plus 2014 por R$ 43.900."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL SAVEIRO
+    ====================================================== -->
+
+    <div class="modal fade" id="modalSaveiro" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Volkswagen Saveiro 1.6 CS Robust
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/saveiro.jpg"
+                        class="modal-image"
+                        alt="Volkswagen Saveiro">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 59.999
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Saveiro 1.6 CS Robust</li>
+                            <li>📅 Ano 2022</li>
+                            <li>⚙️ Motor 1.6</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>⛽ Combustível Flex</li>
+                            <li>🛣️ 90.100 km</li>
+                            <li>📍 Rio Claro - SP</li>
+                            <li>📞 (19) 99867-0778</li>
+                            <li>✅ Maimoni Veículos</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse na Volkswagen Saveiro 1.6 CS Robust 2022 por R$ 59.999."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL ONIX 1.4
+    ====================================================== -->
+
+    <div class="modal fade" id="modalOnix14" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Chevrolet Onix LT 1.4
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/oni.jpg"
+                        class="modal-image"
+                        alt="Chevrolet Onix LT 1.4">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                R$ 43.900
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Chevrolet Onix LT 1.4</li>
+                            <li>📅 Ano 2013</li>
+                            <li>🛣️ 128.300 km</li>
+                            <li>⚙️ Câmbio manual</li>
+                            <li>⛽ Combustível Flex</li>
+                            <li>🔴 Cor vermelha</li>
+                            <li>❄️ Ar condicionado</li>
+                            <li>🔥 Ar quente</li>
+                            <li>🛞 Direção hidráulica</li>
+                            <li>🔒 Trava elétrica</li>
+                            <li>🪟 Vidros elétricos</li>
+                            <li>🚨 Alarme</li>
+                            <li>🛡️ Air Bag</li>
+                            <li>✅ Freios ABS</li>
+                            <li>📱 Bluetooth</li>
+                            <li>🔄 Desembaçador traseiro</li>
+                            <li>💡 Banco do motorista com ajuste de altura</li>
+                            <li>🧽 Limpador traseiro</li>
+                            <li>✅ Laudo Cautelar Aprovado</li>
+                            <li>📍 Rio Claro - SP</li>
+
+                        </ul>
+
+                        <div class="modal-description">
+
+                            <strong>
+                                Descrição
+                            </strong>
+
+                            <p>
+                                Venda, troca e financiamento.
+                                Chevrolet Onix LT 1.4 Flex,
+                                ano 2013, com 128.300 km.
+                                Veículo com ar-condicionado,
+                                direção hidráulica, trava e
+                                vidros elétricos, alarme,
+                                airbag, freios ABS e Bluetooth.
+
+                                <br><br>
+
+                                Laudo cautelar aprovado.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Chevrolet Onix LT 1.4 2013 por R$ 43.900."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL PULSE
+    ====================================================== -->
+
+    <div class="modal fade" id="modalPulse" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Fiat Pulse 1.3 Drive
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/pulse.jpg"
+                        class="modal-image"
+                        alt="Fiat Pulse 1.3 Drive 2024">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                CONSULTE
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ Fiat Pulse Drive AT</li>
+                            <li>📅 Ano 2024</li>
+                            <li>⚙️ Motor 1.3 Flex</li>
+                            <li>⚙️ Câmbio Automático</li>
+                            <li>🛣️ 71.300 km</li>
+                            <li>🎨 Cor Prata</li>
+                            <li>❄️ Ar condicionado</li>
+                            <li>❄️ Ar digital</li>
+                            <li>🔥 Ar quente</li>
+                            <li>🔌 Direção elétrica</li>
+                            <li>🔒 Trava elétrica</li>
+                            <li>🪟 Vidros elétricos</li>
+                            <li>📱 Bluetooth</li>
+                            <li>📱 Apple CarPlay</li>
+                            <li>🚨 Alarme</li>
+                            <li>🛡️ Air Bag</li>
+                            <li>✅ Freios ABS</li>
+                            <li>💻 Computador de bordo</li>
+                            <li>🔄 Desembaçador traseiro</li>
+                            <li>💡 Farol de neblina</li>
+                            <li>🪞 Retrovisor elétrico</li>
+                            <li>🛞 Limpador traseiro</li>
+                            <li>🎵 Rádio</li>
+                            <li>🪑 Banco do motorista com ajuste de altura</li>
+                            <li>🛡️ Vistoria Cautelar Aprovada</li>
+                            <li>📍 Jardim América - Rio Claro/SP</li>
+                            <li>📞 (19) 99867-0778</li>
+
+                        </ul>
+
+                        <div class="modal-description">
+
+                            <strong>
+                                Descrição
+                            </strong>
+
+                            <p>
+                                🚘 Venda, troca e financiamento.
+
+                                <br><br>
+
+                                Fiat Pulse Drive AT, ano 2024,
+                                motor 1.3 Flex, câmbio automático
+                                e 71.300 km.
+
+                                <br><br>
+
+                                Equipado com ar-condicionado,
+                                ar digital, direção elétrica,
+                                trava e vidros elétricos,
+                                multimídia com Apple CarPlay,
+                                Bluetooth, alarme, airbag,
+                                freios ABS e computador de bordo.
+
+                                <br><br>
+
+                                Vistoria cautelar aprovada.
+
+                                <br><br>
+
+                                📍 Rua 3A, 1922 - Jardim América,
+                                Rio Claro/SP.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Fiat Pulse 1.3 Drive 2024. Gostaria de saber o valor e mais informações."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL NEW BEETLE
+    ====================================================== -->
+
+    <div class="modal fade" id="modalBeetle" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Volkswagen New Beetle 2.0
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="./images/beetle.jpg"
+                        class="modal-image"
+                        alt="Volkswagen New Beetle 2.0 2008">
+
+                    <div class="modal-inner">
+
+                        <div class="modal-price">
+
+                            <span>
+                                Valor do veículo
+                            </span>
+
+                            <strong>
+                                CONSULTE
+                            </strong>
+
+                        </div>
+
+                        <h3 class="description-title">
+                            Informações do veículo
+                        </h3>
+
+                        <ul class="feature-list">
+
+                            <li>🚘 Venda / Troca / Financia</li>
+                            <li>✅ VW New Beetle</li>
+                            <li>📅 Ano 2008</li>
+                            <li>⚙️ Motor 2.0 Gasolina</li>
+                            <li>⚙️ Câmbio Manual</li>
+                            <li>🛣️ 144.200 km</li>
+                            <li>🎨 Cor Preto</li>
+                            <li>❄️ Ar condicionado</li>
+                            <li>🔥 Ar quente</li>
+                            <li>🪑 Bancos de couro</li>
+                            <li>🪑 Banco do motorista com ajuste de altura</li>
+                            <li>📱 Bluetooth</li>
+                            <li>💻 Computador de bordo</li>
+                            <li>🔄 Desembaçador traseiro</li>
+                            <li>🔌 Direção hidráulica</li>
+                            <li>🚨 Alarme</li>
+                            <li>🛡️ Air Bag</li>
+                            <li>✅ Freios ABS</li>
+                            <li>🛞 Rodas de liga leve</li>
+                            <li>🌧️ Sensor de chuva</li>
+                            <li>🪟 Vidros elétricos</li>
+                            <li>🔒 Trava elétrica</li>
+                            <li>💡 Farol de neblina</li>
+                            <li>🛞 Pneu novo</li>
+                            <li>🛡️ Laudo Cautelar Aprovado</li>
+                            <li>📍 Jardim América - Rio Claro/SP</li>
+                            <li>📞 (19) 99867-0778</li>
+
+                        </ul>
+
+                        <div class="modal-description">
+
+                            <strong>
+                                Descrição
+                            </strong>
+
+                            <p>
+                                🚘 Venda, troca e financiamento.
+
+                                <br><br>
+
+                                Volkswagen New Beetle 2.0,
+                                ano 2008, motor 2.0 gasolina,
+                                câmbio manual e 144.200 km.
+
+                                <br><br>
+
+                                Veículo equipado com ar-condicionado,
+                                ar quente, bancos de couro,
+                                direção hidráulica, vidros e
+                                travas elétricas, Bluetooth,
+                                computador de bordo, rodas de
+                                liga leve, sensor de chuva,
+                                freios ABS e airbag.
+
+                                <br><br>
+
+                                🛞 Pneu novo.
+
+                                <br><br>
+
+                                🛡️ Laudo cautelar aprovado.
+
+                                <br><br>
+
+                                📍 Rua 3A, 1922 - Jardim América,
+                                Rio Claro/SP.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Tenho interesse no Volkswagen New Beetle 2.0 2008. Gostaria de saber o valor e mais informações."
+                            target="_blank"
+                            class="modal-whatsapp">
+
+                            📱 FALAR SOBRE ESTE CARRO
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SOBRE
+    ====================================================== -->
+
+    <section id="sobre" class="section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <div class="about-box">
+
+                        <div class="section-label">
+                            Quem somos
+                        </div>
+
+                        <h2>
+                            MAIS QUE UM CARRO.
+                            <br>
+                            UMA NOVA EXPERIÊNCIA.
+                        </h2>
+
+                        <p>
+                            A Maimoni Veículos é especializada
+                            na venda de veículos usados e
+                            seminovos em Rio Claro - SP.
+                        </p>
+
+                        <p>
+                            Trabalhamos para oferecer aos nossos
+                            clientes veículos de qualidade,
+                            segurança e confiança.
+                        </p>
+
+                        <p>
+                            Nosso compromisso é proporcionar
+                            uma experiência transparente,
+                            tranquila e personalizada,
+                            ajudando você a encontrar o veículo
+                            ideal para suas necessidades.
+                        </p>
+
+                        <p>
+                            Conte com nossa equipe para
+                            encontrar seu próximo carro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="about-image text-center">
+
+                        <img
+                            src="./images/logo.jpg"
+                            class="img-fluid"
+                            alt="Maimoni Veículos">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOCALIZAÇÃO
+    ====================================================== -->
+
+    <section id="localizacao">
+
+        <div class="container-fluid">
+
+            <div class="row g-0">
+
+                <div class="col-lg-5">
+
+                    <div class="location-info">
+
+                        <div class="location-icon">
+                            📍
+                        </div>
+
+                        <h2>
+                            VENHA NOS VISITAR
+                        </h2>
+
+                        <div class="location-item">
+
+                            <strong>
+                                ENDEREÇO
+                            </strong>
+
+                            <span>
+                                Rua 3A, 1922
+                                <br>
+                                Jardim América
+                                <br>
+                                CEP 13506-000
+                                <br>
+                                Rio Claro - SP
+                            </span>
+
+                        </div>
+
+                        <div class="location-item">
+
+                            <strong>
+                                TELEFONE / WHATSAPP
+                            </strong>
+
+                            <span>
+                                (19) 99867-0778
+                            </span>
+
+                        </div>
+
+                        <div class="location-item">
+
+                            <strong>
+                                E-MAIL
+                            </strong>
+
+                            <span>
+                                contato@maimoniveiculos.com.br
+                            </span>
+
+                        </div>
+
+                        <div class="location-item">
+
+                            <strong>
+                                HORÁRIO
+                            </strong>
+
+                            <span>
+                                Segunda a Sexta:
+                                08:00 - 18:00
+
+                                <br><br>
+
+                                Sábado:
+                                08:00 - 13:00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <iframe
+                        class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.267085721504!2d-47.558588824705254!3d-22.38128657962839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7db054b2159e%3A0x5f4177f93d028229!2sMaimoni%20Ve%C3%ADculos!5e0!3m2!1spt-BR!2sbr!4v1787666206944!5m2!1spt-BR!2sbr"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        title="Localização da Maimoni Veículos">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTATO
+    ====================================================== -->
+
+    <section id="contato" class="section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    Atendimento
+                </div>
+
+                <h2 class="section-title text-white">
+                    VAMOS NEGOCIAR?
+                </h2>
+
+                <p class="section-subtitle text-secondary">
+                    Ficou interessado em algum veículo?
+                    Nossa equipe está pronta para atender você.
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center g-4">
+
+                <div class="col-md-5">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon whatsapp-icon">
+                            ☏
+                        </div>
+
+                        <h3>
+                            WhatsApp
+                        </h3>
+
+                        <p>
+                            Tire suas dúvidas,
+                            consulte disponibilidade
+                            e negocie seu próximo carro
+                            diretamente com nossa equipe.
+                        </p>
+
+                        <a
+                            href="https://wa.me/5519998670778?text=Olá! Gostaria de falar com um consultor da Maimoni Veículos."
+                            target="_blank"
+                            class="contact-btn whatsapp">
+
+                            FALAR NO WHATSAPP
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon instagram-icon">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Instagram
+                        </h3>
+
+                        <p>
+                            Acompanhe nosso estoque,
+                            novidades, ofertas e
+                            novos veículos disponíveis.
+                        </p>
+
+                        <a
+                            href="https://www.instagram.com/maimoni_veiculos"
+                            target="_blank"
+                            class="contact-btn instagram">
+
+                            VISITAR INSTAGRAM
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <strong>
+            MAIMONI VEÍCULOS
+        </strong>
+
+        <br>
+
+        © 2026 — Todos os direitos reservados.
+
+        <br>
+
+        Rio Claro - SP
+
+    </footer>
+
+
+    <!-- =====================================================
+         WHATSAPP FLUTUANTE
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/5519998670778?text=Olá! Vim pelo site da Maimoni Veículos."
+        target="_blank"
+        class="floating-whatsapp"
+        aria-label="Falar no WhatsApp">
+
+        ☏
+
+    </a>
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
